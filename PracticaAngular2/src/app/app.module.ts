@@ -8,8 +8,8 @@ import { CuerpoComponent } from './componentes/cuerpo/cuerpo.component';
 import { Cuerpo2Component } from './componentes/cuerpo2/cuerpo2.component';
 
 const routes: Routes = [
-  {path: 'cuerpo', component: CuerpoComponent},
-  {path: 'cuerpo2', component: Cuerpo2Component}
+  { path: 'cuerpo', component: CuerpoComponent},
+  { path: 'cuerpo2', component: Cuerpo2Component}
 ];
 
 @NgModule({
