@@ -13,7 +13,7 @@ export class CabeceraComponent implements OnInit {
   ];
 
   constructor() { }
-
+  public app_name = "NAVBAR"
   ngOnInit(): void {
   }
 
