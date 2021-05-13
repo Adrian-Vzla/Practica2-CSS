@@ -1,17 +1,15 @@
- import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cuerpo2',
   templateUrl: './cuerpo2.component.html',
+  styleUrls: ['./cuerpo2.component.css']
 })
-export class Cuerpo2Component{
-  mostrar = true;
+export class Cuerpo2Component implements OnInit {
 
-  informacion2 = {
-    autor: 'Keanu Reeves',
-    frase: 'You´re breathtaking'
-  };
+  constructor() { }
 
-  personajes2 = ['Messi','Canelo','Mandalorian'];
+  ngOnInit(): void {
+  }
+
 }
-
