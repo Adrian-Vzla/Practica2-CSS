@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
+  menuItems = [
+    {linkID: 1, linkName: 'Cuerpo', linkUrl: 'cuerpo'},
+    {linkID: 2, linkName: 'Cuerpo 2', linkUrl: 'cuerpo2'}
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
