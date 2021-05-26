@@ -1,6 +1,6 @@
-<h4>Formularios <small> tipo </small></h4>
+<h4>Formularios <small> template </small></h4>
 <hr>
-<form autocomplete="off">
+<form autocomplete="off" (ngSubmit)="guardar( formulario )" #formulario="ngForm">
 
   <div>
 
@@ -10,7 +10,9 @@
 
         <input class="form-control"
                type="text"
-               placeholder="Nombre">
+               placeholder="Nombre"
+               name="nombre"
+               [ngModel]="info.nombre">
       </div>
     </div>
 
@@ -20,7 +22,10 @@
 
         <input class="form-control"
                type="text"
-               placeholder="Apellido">
+               placeholder="Apellido"
+               name="apellido"
+               [ngModel]="info.apellido"
+               required>
       </div>
     </div>
 
@@ -32,7 +37,9 @@
 
       <input class="form-control"
              type="email"
-             placeholder="Correo electrónico">
+             placeholder="Correo electrónico"
+             name="correo"
+             [ngModel]="info.correo">
     </div>
   </div>
 
