@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive',
@@ -7,9 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReactiveComponent implements OnInit {
 
-  constructor() { }
+  formulario: FormGroup;
+
+  constructor( private fb: FormBuilder) {
+    this.crearFormulario();
+    this.cargarDataFormulario();
+   }
 
   ngOnInit(): void {
+  }
+
+  crearFormulario(){
+    this.formulario = this.fb.group({
+      nombre: ['', [Validators.required, Validators.minLength(5)]],
+      apellido: ['', Validators.required],
+      correo: ['', Validators.required]
+    });
+  }
+
+  cargarDataFormulario(){
+    this.formulario.setValue({
+      nombre: 'Jesus',
+      apellido: 'Valenzuela',
+      correo: 'adrian@gmail.com'
+    })
+  }
+
+  guardar(){
+    if(this.formulario.valid){
+      console.log( this.formulario.value );
+    } else {
+      console.log('Su formulario no es valido');
+    }
+    
   }
 
 }
