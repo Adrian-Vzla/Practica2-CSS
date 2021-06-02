@@ -1,13 +1,9 @@
 <div class="row">
     <div *ngFor="let heroe of heroes;  let i = index" class="list-group list-group-flush col-2">
         <div class="card mb-2">
-            <img src={{heroe.img}} class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Nombre: {{ heroe.nombre }}</h5>
-                <p class="card-text">Biografía: {{heroe.bio}}</p>
-                <p class="card-text">Año de aparición: {{heroe.aparicion}}</p>
-                <p class="card-text">Casa: {{heroe.casa}}</p>
-
+                <p class="card-title">ID: {{ heroe.id }}<p>
+                <p class="card-text">Nombre: {{heroe.name}}</p>
             </div>
         </div>
     </div>
