@@ -1,0 +1,105 @@
+<h2>Añadir un contacto</h2>
+<form autocomplete="off" [formGroup]="formulario" (ngSubmit)="guardar()">
+    <div class="row">
+        <div class="col-6">
+            <p>Nombre(*)</p>
+            <div class="form-group row">
+                <div class="col-8">  
+                    <input class="form-control"
+                        type="text"
+                        placeholder="Escribe un nombre"
+                        formControlName="nombre">
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-6">
+            <p>Apellido(*)</p>
+            <div class="form-group row">
+                <div class="col-8">
+      
+                    <input class="form-control"
+                        type="text"
+                        placeholder="Escribe tus apellidos"
+                        formControlName="apellido">
+                </div>
+            </div>
+        </div>   
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12">
+            <p>Descripcion contacto</p>
+            <div class="form-group row">
+                <div class="col-10">  
+                    <input class="form-control"
+                        type="text"
+                        placeholder="Escribe una descripcion del contacto"
+                        formControlName="descripcion">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            <p>Sexo</p>
+            <div class="form-group row">
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Sexo</label>
+                    <select class="form-select" id="inputGroupSelect01" formControlName="sexo">
+                      <option value="Hombre">Hombre</option>
+                      <option value="Mujer">Mujer</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-6">
+            <p>Empresa</p>
+            <div class="form-group row">
+                <div class="col-8">
+      
+                    <input class="form-control"
+                        type="text"
+                        placeholder="Escribe el nombre de su empresa"
+                        formControlName="empresa">
+                </div>
+            </div>
+        </div>   
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            <p>Email(*)</p>
+            <div class="form-group row">
+                <div class="col-8">  
+                    <input class="form-control"
+                        type="text"
+                        placeholder="Escribe tu email"
+                        formControlName="email">
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-6">
+            <p>Telefono(*)</p>
+            <div class="form-group row">
+                <div class="col-8">
+      
+                    <input class="form-control"
+                        type="text"
+                        placeholder="Escribe un telefono"
+                        formControlName="telefono"
+                        maxlength="10">
+                </div>
+            </div>
+        </div>   
+    </div>
+    <hr>
+    <div class="row">
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Añadir Contacto</button>
+        </div>
+    </div>
+</form>

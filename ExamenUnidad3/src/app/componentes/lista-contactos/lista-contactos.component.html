@@ -1,0 +1,14 @@
+<h2>Lista de contactos</h2>
+<form autocomplete="off" [formGroup]="formulario" (ngSubmit)="guardar()">
+    <div class="row">
+      <div *ngFor="let contacto of contactos;  let i = index" class="col">
+          <div class="card" style="width:max-content">
+              <div class="card-body">
+                <h5 class="card-title">{{contacto.apellidos}},{{contacto.nombre}},({{contacto.genero}})</h5>
+                <p class="card-text">{{contacto.descripcion}}</p>
+                <a href="#" class="btn btn-primary" type="submit">Ver detalles</a>
+              </div>
+           </div>
+      </div>
+    </div>  
+</form>
