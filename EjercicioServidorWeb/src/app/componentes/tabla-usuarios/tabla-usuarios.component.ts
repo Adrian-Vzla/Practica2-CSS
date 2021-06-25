@@ -20,4 +20,19 @@ export class TablaUsuariosComponent implements OnInit {
     
   }
 
+  actualizar( item: any ) {
+    console.log('Actualizando');
+    console.log(this.usuarios[item]);
+  }
+
+  eliminar( item: any ) {
+    console.log('Eliminando');
+    const _id = this.usuarios[item]._id;
+
+    console.log(_id);
+    this.service.deleteUsuario( _id ).subscribe( res => {
+      console.log(res);
+    })
+  }
+
 }
