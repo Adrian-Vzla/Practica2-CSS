@@ -9,7 +9,7 @@ import { ActualizarUsuarioComponent } from './componentes/actualizar-usuario/act
 const routes: Routes = [
   { path: 'tablaUsuarios', component: TablaUsuariosComponent},
   { path: 'crearUsuario', component: CrearUsuarioComponent},
-  { path: 'actualizarUsuario', component: ActualizarUsuarioComponent},
+  { path: 'actualizarUsuario/:id', component: ActualizarUsuarioComponent},
   { path: 'formulario', component: FormularioComponent},
   { path: '**', pathMatch: 'full', redirectTo:'tablaUsuarios'}
 ];
